@@ -27,14 +27,14 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Sign in with nextAuth, sign up
 - Write blog
 ## To dos:
-. Edit your infomation
-. Your posts
+- Edit your infomation
+- Your posts
 
-. Update Blog
-. Delete Blog
+- Update Blog
+- Delete Blog
 
-. Add category part.
-. Add image part
+- Add category part.
+- Add image part
 
 ## Deploy on Vercel
 
