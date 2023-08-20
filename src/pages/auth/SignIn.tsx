@@ -4,6 +4,7 @@ import { Token } from "@/interfaces/token";
 import jwtDecode from "jwt-decode";
 import {signIn } from "next-auth/react"
 import Link from "next/link";
+import { useSession } from "next-auth/react"
 
 interface LoginForm {
     email: string;
@@ -13,6 +14,12 @@ const SignIn = () => {
     const [formData, setFormData] = useState<LoginForm>({email: '', password: ""})
     const [error, setError] = useState<string | null>(null);
     const router = useRouter()
+    const {data: session} = useSession()
+    useEffect(() => {
+      if(session){
+        router.push('/')
+      }
+    },[] )
 
     const handleInputChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });

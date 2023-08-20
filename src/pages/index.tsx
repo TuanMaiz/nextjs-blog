@@ -22,7 +22,6 @@ export default function Home({posts} : PostList) {
     <>
       <Header/>
       <HomePage posts={posts}/>
-
     </>
   )
 }
